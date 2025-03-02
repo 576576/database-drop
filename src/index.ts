@@ -9,7 +9,7 @@ export const Config: Schema<Config> = Schema.object({})
 export function apply(ctx: Context) {
   ctx.command('ddrop <tableName>')
     .action(async ({ session }, tableName) => {
-      session.send(`已经dropTable ${tableName}, 必须重启Koishi`)
+      session.send(`已经dropTable ${tableName}`)
       await ctx.database.drop(tableName as any)
     })
   ctx.command('ddropAll')
