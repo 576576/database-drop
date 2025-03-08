@@ -1,6 +1,7 @@
 import { Context, Schema, Session, Tables } from 'koishi'
 
 export const name = 'database-drop'
+export const inject = ['database']
 
 export interface Config { }
 
